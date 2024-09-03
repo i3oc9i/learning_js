@@ -13,7 +13,7 @@ function createNoteEl(id, content) {
   element.value = content;
 
   element.addEventListener("click", (event) => {
-    if (event.ctrlKey) {
+    if (event.metaKey) {
       const warning = confirm("Do you want to delete this note?");
       if (warning) {
         deleteNote(id, element);
